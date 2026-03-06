@@ -78,687 +78,763 @@
             <button id="cancelLoginBtn" class="ml-2 bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600">Cancelar</button>
         </div>
     </div>
-            <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
-                <div class="flex items-center">
-                    <div class="bg-indigo-600 text-white p-2 rounded-lg mr-3">
-                        <i class="fas fa-ticket-alt text-xl"></i>
-                    </div>
-                    <h1 class="text-xl font-bold text-gray-900">Mobile Vision Senhas</h1>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-user text-indigo-600"></i>
-                        <span id="currentUserDisplay" class="text-gray-700 font-medium">Atendente</span>
-                    </div>
-                    <span id="currentTime" class="text-gray-600 font-medium"></span>
-                </div>
+    <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <div class="flex items-center">
+            <div class="bg-indigo-600 text-white p-2 rounded-lg mr-3">
+                <i class="fas fa-ticket-alt text-xl"></i>
             </div>
-        </header>
-
-        <div class="bg-white border-b border-gray-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <nav class="flex overflow-x-auto">
-                    <button data-tab="admin" class="tab-button px-4 py-3 text-sm font-medium text-gray-500 hover:text-indigo-600 whitespace-nowrap border-b-2 border-transparent hover:border-indigo-300">
-                        <i class="fas fa-cog mr-2"></i> Administração (admin123)
-                    </button>
-                    <button data-tab="atendente" class="tab-button px-4 py-3 text-sm font-medium text-gray-500 hover:text-indigo-600 whitespace-nowrap border-b-2 border-transparent hover:border-indigo-300">
-                        <i class="fas fa-user-tie mr-2"></i> Atendente (atendente123)
-                    </button>
-                    <button data-tab="emissor" class="tab-button px-4 py-3 text-sm font-medium text-gray-500 hover:text-indigo-600 whitespace-nowrap border-b-2 border-transparent hover:border-indigo-300">
-                        <i class="fas fa-tablet-alt mr-2"></i> Emissor de Senhas (senha123)
-                    </button>
-                    <button data-tab="cliente" class="tab-button px-4 py-3 text-sm font-medium text-gray-500 hover:text-indigo-600 whitespace-nowrap border-b-2 border-transparent hover:border-indigo-300">
-                        <i class="fas fa-tv mr-2"></i> Visualização Cliente (cliente123)
-                    </button>
-                </nav>
-            </div>
+            <h1 class="text-xl font-bold text-gray-900">Mobile Vision Senhas</h1>
         </div>
+        <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-user text-indigo-600"></i>
+                <span id="currentUserDisplay" class="text-gray-700 font-medium">Atendente</span>
+            </div>
+            <span id="currentTime" class="text-gray-600 font-medium"></span>
+        </div>
+    </div>
 
-        <main class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-            <div id="admin" class="tab-content">
-                <div class="bg-white shadow rounded-lg p-6 mb-6">
-                    <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                        <i class="fas fa-cog text-indigo-600 mr-2"></i> Configurações do Sistema
-                    </h2>
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex overflow-x-auto">
+                <button data-tab="admin" class="tab-button px-4 py-3 text-sm font-medium text-gray-500 hover:text-indigo-600 whitespace-nowrap border-b-2 border-transparent hover:border-indigo-300">
+                    <i class="fas fa-cog mr-2"></i> Administração (admin123)
+                </button>
+                <button data-tab="atendente" class="tab-button px-4 py-3 text-sm font-medium text-gray-500 hover:text-indigo-600 whitespace-nowrap border-b-2 border-transparent hover:border-indigo-300">
+                    <i class="fas fa-user-tie mr-2"></i> Atendente (atendente123)
+                </button>
+                <button data-tab="emissor" class="tab-button px-4 py-3 text-sm font-medium text-gray-500 hover:text-indigo-600 whitespace-nowrap border-b-2 border-transparent hover:border-indigo-300">
+                    <i class="fas fa-tablet-alt mr-2"></i> Emissor de Senhas (senha123)
+                </button>
+                <button data-tab="cliente" class="tab-button px-4 py-3 text-sm font-medium text-gray-500 hover:text-indigo-600 whitespace-nowrap border-b-2 border-transparent hover:border-indigo-300">
+                    <i class="fas fa-tv mr-2"></i> Visualização Cliente (cliente123)
+                </button>
+            </nav>
+        </div>
+    </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <h3 class="text-lg font-medium text-gray-700 mb-3">Configuração de Vídeo</h3>
-                            <div class="space-y-4">
-                                <div>
-                                    <label for="videoUrl" class="block text-sm font-medium text-gray-700 mb-1">URL do Vídeo (URL ou iframe do YouTube)</label>
-                                    <input type="text" id="videoUrl" placeholder="https://www.youtube.com/embed/..." 
-                                           class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+    <main class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+        <div id="admin" class="tab-content">
+            <div class="bg-white shadow rounded-lg p-6 mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-cog text-indigo-600 mr-2"></i> Configurações do Sistema
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-700 mb-3">Configuração de Vídeo</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="videoUrl" class="block text-sm font-medium text-gray-700 mb-1">URL do Vídeo (URL ou iframe do YouTube)</label>
+                                <input type="text" id="videoUrl" placeholder="https://www.youtube.com/embed/..." 
+                                       class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <div>
+                                <label for="videoVolume" class="block text-sm font-medium text-gray-700 mb-1">Volume do Vídeo</label>
+                                <input type="range" id="videoVolume" min="0" max="100" value="50" 
+                                       class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                    <span>0%</span>
+                                    <span id="videoVolumeLabel">50%</span>
+                                    <span>100%</span>
                                 </div>
-                                <div>
-                                    <label for="videoVolume" class="block text-sm font-medium text-gray-700 mb-1">Volume do Vídeo</label>
-                                    <input type="range" id="videoVolume" min="0" max="100" value="50" 
-                                           class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
-                                    <div class="flex justify-between text-xs text-gray-500 mt-1">
-                                        <span>0%</span>
-                                        <span>50%</span>
-                                        <span>100%</span>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="flex space-x-2">
                                 <button id="saveVideoConfig" 
                                         class="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition duration-300 flex items-center justify-center">
                                     <i class="fas fa-save mr-2"></i> Salvar Configuração
                                 </button>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-lg font-medium text-gray-700 mb-3">Pré-visualização</h3>
-                            <div class="video-container bg-gray-200 rounded-lg overflow-hidden">
-                                <iframe id="videoPreview" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white shadow rounded-lg p-6">
-                    <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                        <i class="fas fa-history text-indigo-600 mr-2"></i> Histórico de Senhas
-                    </h2>
-
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Número</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data/Hora</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody id="historyList" class="bg-white divide-y divide-gray-200"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <div id="atendente" class="tab-content">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <div class="lg:col-span-2">
-                        <div class="bg-white shadow rounded-lg p-6">
-                            <h2 class="text-xl font-semibold text-gray-800 mb-6 flex items-center">
-                                <i class="fas fa-user-tie text-indigo-600 mr-2"></i> Painel do Atendente
-                            </h2>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <h3 class="text-lg font-medium text-gray-700 mb-3">Chamar Próxima Senha</h3>
-                                    <div class="space-y-4">
-                                        <button id="callNormalBtn" 
-                                                class="btn-senha w-full bg-indigo-600 text-white py-4 px-6 rounded-lg text-xl font-bold hover:bg-indigo-700 flex items-center justify-center">
-                                            <i class="fas fa-ticket-alt mr-3"></i> Chamar Normal
-                                        </button>
-                                        <button id="callPreferentialBtn" 
-                                                class="btn-senha w-full bg-emerald-600 text-white py-4 px-6 rounded-lg text-xl font-bold hover:bg-emerald-700 flex items-center justify-center">
-                                            <i class="fas fa-heart mr-3"></i> Chamar Preferencial
-                                        </button>
-                                        <button id="callAgainBtn" 
-                                                class="btn-senha w-full bg-amber-500 text-white py-4 px-6 rounded-lg text-xl font-bold hover:bg-amber-600 flex items-center justify-center">
-                                            <i class="fas fa-redo mr-3"></i> Chamar Novamente
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <h3 class="text-lg font-medium text-gray-700 mb-3">Senha Atual</h3>
-                                    <div class="bg-gray-100 p-6 rounded-lg flex flex-col items-center justify-center h-full">
-                                        <div id="currentTicketDisplay" class="senha-display mb-4">---</div>
-                                        <div id="currentTicketTime" class="text-gray-600 text-sm">--:--:--</div>
-                                    </div>
-                                </div>
+                                <button id="toggleMuteBtn" 
+                                        class="bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 flex items-center">
+                                    <i class="fas fa-volume-up mr-2"></i> Mudo
+                                </button>
+                                <button id="resetAllBtn" 
+                                        class="ml-auto bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300 flex items-center">
+                                    <i class="fas fa-eraser mr-2"></i> Zerar Senhas
+                                </button>
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <div class="bg-white shadow rounded-lg p-6 h-full">
-                            <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                                <i class="fas fa-list-ol text-indigo-600 mr-2"></i> Fila de Espera
-                            </h2>
+                        <h3 class="text-lg font-medium text-gray-700 mb-3">Pré-visualização</h3>
+                        <div class="video-container bg-gray-200 rounded-lg overflow-hidden">
+                            <iframe id="videoPreview" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                            <div class="space-y-3">
-                                <div class="bg-indigo-50 p-4 rounded-lg">
-                                    <h3 class="font-medium text-indigo-800 mb-2 flex items-center">
-                                        <i class="fas fa-ticket-alt mr-2"></i> Senhas Normais
-                                    </h3>
-                                    <div id="normalQueue" class="space-y-2"></div>
+            <div class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-history text-indigo-600 mr-2"></i> Histórico de Senhas
+                </h2>
+
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Número</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data/Hora</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyList" class="bg-white divide-y divide-gray-200"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="atendente" class="tab-content">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2">
+                    <div class="bg-white shadow rounded-lg p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-6 flex items-center">
+                            <i class="fas fa-user-tie text-indigo-600 mr-2"></i> Painel do Atendente
+                        </h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-700 mb-3">Chamar Próxima Senha</h3>
+                                <div class="space-y-4">
+                                    <button id="callNormalBtn" 
+                                            class="btn-senha w-full bg-indigo-600 text-white py-4 px-6 rounded-lg text-xl font-bold hover:bg-indigo-700 flex items-center justify-center">
+                                        <i class="fas fa-ticket-alt mr-3"></i> Chamar Normal
+                                    </button>
+                                    <button id="callPreferentialBtn" 
+                                            class="btn-senha w-full bg-emerald-600 text-white py-4 px-6 rounded-lg text-xl font-bold hover:bg-emerald-700 flex items-center justify-center">
+                                        <i class="fas fa-heart mr-3"></i> Chamar Preferencial
+                                    </button>
+                                    <button id="callAgainBtn" 
+                                            class="btn-senha w-full bg-amber-500 text-white py-4 px-6 rounded-lg text-xl font-bold hover:bg-amber-600 flex items-center justify-center">
+                                        <i class="fas fa-redo mr-3"></i> Chamar Novamente
+                                    </button>
+                                    <button id="resetTicketsAtendenteBtn"
+                                            class="mt-2 w-full bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 flex items-center justify-center">
+                                        <i class="fas fa-eraser mr-2"></i> Zerar Senhas (Atendente)
+                                    </button>
                                 </div>
+                            </div>
 
-                                <div class="bg-emerald-50 p-4 rounded-lg">
-                                    <h3 class="font-medium text-emerald-800 mb-2 flex items-center">
-                                        <i class="fas fa-heart mr-2"></i> Senhas Preferenciais
-                                    </h3>
-                                    <div id="preferentialQueue" class="space-y-2"></div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-700 mb-3">Senha Atual</h3>
+                                <div class="bg-gray-100 p-6 rounded-lg flex flex-col items-center justify-center h-full">
+                                    <div id="currentTicketDisplay" class="senha-display mb-4">---</div>
+                                    <div id="currentTicketTime" class="text-gray-600 text-sm">--:--:--</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div id="emissor" class="tab-content">
-                <div class="bg-white shadow rounded-lg p-6">
-                    <h2 class="text-xl font-semibold text-gray-800 mb-6 flex items-center">
-                        <i class="fas fa-tablet-alt text-indigo-600 mr-2"></i> Emissor de Senhas
-                    </h2>
+                <div>
+                    <div class="bg-white shadow rounded-lg p-6 h-full">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-list-ol text-indigo-600 mr-2"></i> Fila de Espera
+                        </h2>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="flex flex-col items-center justify-center">
-                            <button id="emitNormalBtn" 
-                                    class="btn-senha w-full max-w-xs bg-indigo-600 text-white py-12 px-6 rounded-xl text-3xl font-bold hover:bg-indigo-700 transition duration-300 flex flex-col items-center justify-center mb-4">
-                                <i class="fas fa-ticket-alt text-4xl mb-2"></i>
-                                <span>Normal</span>
-                            </button>
-                            <div id="lastNormalTicket" class="text-gray-600 text-lg">Última: N-000</div>
-                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-indigo-50 p-4 rounded-lg">
+                                <h3 class="font-medium text-indigo-800 mb-2 flex items-center">
+                                    <i class="fas fa-ticket-alt mr-2"></i> Senhas Normais
+                                </h3>
+                                <div id="normalQueue" class="space-y-2"></div>
+                            </div>
 
-                        <div class="flex flex-col items-center justify-center">
-                            <button id="emitPreferentialBtn" 
-                                    class="btn-senha w-full max-w-xs bg-emerald-600 text-white py-12 px-6 rounded-xl text-3xl font-bold hover:bg-emerald-700 transition duration-300 flex flex-col items-center justify-center mb-4">
-                                <i class="fas fa-heart text-4xl mb-2"></i>
-                                <span>Preferencial</span>
-                            </button>
-                            <div id="lastPreferentialTicket" class="text-gray-600 text-lg">Última: P-000</div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8 bg-gray-100 p-4 rounded-lg">
-                        <h3 class="font-medium text-gray-700 mb-2 flex items-center">
-                            <i class="fas fa-info-circle text-indigo-600 mr-2"></i> Instruções
-                        </h3>
-                        <p class="text-gray-600">Toque no botão correspondente ao tipo de atendimento desejado. A senha será exibida no painel de visualização.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="cliente" class="tab-content">
-                <div class="h-screen bg-black text-white flex overflow-hidden">
-                    <!-- Lado Esquerdo: Vídeo -->
-                    <div class="flex-1 flex flex-col">
-                        <div class="flex-1 relative bg-gray-900">
-                            <div class="video-container absolute inset-0">
-                                <iframe id="clientVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="bg-emerald-50 p-4 rounded-lg">
+                                <h3 class="font-medium text-emerald-800 mb-2 flex items-center">
+                                    <i class="fas fa-heart mr-2"></i> Senhas Preferenciais
+                                </h3>
+                                <div id="preferentialQueue" class="space-y-2"></div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Lado Direito: Senha -->
-                    <div class="w-1/3 bg-gray-900 border-l border-gray-700 flex flex-col p-8 justify-center items-center">
-                        <div class="text-center">
-                            <div class="text-lg font-bold text-gray-300 mb-2">SENHA ATUAL</div>
-                            <div id="clientCurrentTicket" class="text-7xl font-bold text-yellow-400 mb-4 animate-pulse">---</div>
-                            <div id="clientCurrentTicketTime" class="text-sm text-gray-400 mb-6">--:--:--</div>
-                            <hr class="border-gray-600 my-6">
-                            <div class="text-sm font-bold text-gray-300 mb-4">PRÓXIMAS SENHAS</div>
-                            <div id="clientNextTickets" class="space-y-2"></div>
+        <div id="emissor" class="tab-content">
+            <div class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-tablet-alt text-indigo-600 mr-2"></i> Emissor de Senhas
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="flex flex-col items-center justify-center">
+                        <button id="emitNormalBtn" 
+                                class="btn-senha w-full max-w-xs bg-indigo-600 text-white py-12 px-6 rounded-xl text-3xl font-bold hover:bg-indigo-700 transition duration-300 flex flex-col items-center justify-center mb-4">
+                            <i class="fas fa-ticket-alt text-4xl mb-2"></i>
+                            <span>Normal</span>
+                        </button>
+                        <div id="lastNormalTicket" class="text-gray-600 text-lg">Última: N-000</div>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center">
+                        <button id="emitPreferentialBtn" 
+                                class="btn-senha w-full max-w-xs bg-emerald-600 text-white py-12 px-6 rounded-xl text-3xl font-bold hover:bg-emerald-700 transition duration-300 flex flex-col items-center justify-center mb-4">
+                            <i class="fas fa-heart text-4xl mb-2"></i>
+                            <span>Preferencial</span>
+                        </button>
+                        <div id="lastPreferentialTicket" class="text-gray-600 text-lg">Última: P-000</div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gray-100 p-4 rounded-lg">
+                    <h3 class="font-medium text-gray-700 mb-2 flex items-center">
+                        <i class="fas fa-info-circle text-indigo-600 mr-2"></i> Instruções
+                    </h3>
+                    <p class="text-gray-600">Toque no botão correspondente ao tipo de atendimento desejado. A senha será exibida no painel de visualização.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="cliente" class="tab-content">
+            <div class="h-screen bg-black text-white flex overflow-hidden">
+                <!-- Lado Esquerdo: Vídeo -->
+                <div class="flex-1 flex flex-col">
+                    <div class="flex-1 relative bg-gray-900">
+                        <div class="video-container absolute inset-0">
+                            <iframe id="clientVideo" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
+
+                <!-- Lado Direito: Senha -->
+                <div class="w-1/3 bg-gray-900 border-l border-gray-700 flex flex-col p-8 justify-center items-center">
+                    <div class="text-center">
+                        <div class="text-lg font-bold text-gray-300 mb-2">SENHA ATUAL</div>
+                        <div id="clientCurrentTicket" class="text-7xl font-bold text-yellow-400 mb-4 animate-pulse">---</div>
+                        <div id="clientCurrentTicketTime" class="text-sm text-gray-400 mb-6">--:--:--</div>
+                        <hr class="border-gray-600 my-6">
+                        <div class="text-sm font-bold text-gray-300 mb-4">PRÓXIMAS SENHAS</div>
+                        <div id="clientNextTickets" class="space-y-2"></div>
+                    </div>
+                </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
 
-    <script>
-    // ---------- Estado ----------
-    let normalTickets = [];
-    let preferentialTickets = [];
-    let calledTickets = [];
-    let videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ";
-    let currentTicket = null;
-    let lastNormalNumber = 0;
-    let lastPreferentialNumber = 0;
-    let isLoggedIn = false;
-    let currentRole = '';
+<script>
+/* ---------- Estado ---------- */
+let normalTickets = [];
+let preferentialTickets = [];
+let calledTickets = [];
+let videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+let currentTicket = null;
+let lastNormalNumber = 0;
+let lastPreferentialNumber = 0;
+let isLoggedIn = false;
+let currentRole = '';
 
-    // Senhas
-    const passwords = {
-        admin: 'admin123',
-        atendente: 'atendente123',
-        emissor: 'senha123',
-        cliente: 'cliente123'
-    };
+/* Senhas */
+const passwords = {
+    admin: 'admin123',
+    atendente: 'atendente123',
+    emissor: 'senha123',
+    cliente: 'cliente123'
+};
 
-    // ---------- Elementos ----------
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
+/* Elementos */
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
 
-    const videoUrlInput = document.getElementById('videoUrl');
-    const videoVolume = document.getElementById('videoVolume');
-    const saveVideoConfig = document.getElementById('saveVideoConfig');
-    const videoPreview = document.getElementById('videoPreview');
-    const historyList = document.getElementById('historyList');
+const videoUrlInput = document.getElementById('videoUrl');
+const videoVolume = document.getElementById('videoVolume');
+const videoVolumeLabel = document.getElementById('videoVolumeLabel');
+const saveVideoConfig = document.getElementById('saveVideoConfig');
+const toggleMuteBtn = document.getElementById('toggleMuteBtn');
+const resetAllBtn = document.getElementById('resetAllBtn');
+const videoPreview = document.getElementById('videoPreview');
+const historyList = document.getElementById('historyList');
 
-    const callNormalBtn = document.getElementById('callNormalBtn');
-    const callPreferentialBtn = document.getElementById('callPreferentialBtn');
-    const callAgainBtn = document.getElementById('callAgainBtn');
-    const currentTicketDisplay = document.getElementById('currentTicketDisplay');
-    const currentTicketTime = document.getElementById('currentTicketTime');
-    const normalQueue = document.getElementById('normalQueue');
-    const preferentialQueue = document.getElementById('preferentialQueue');
+const callNormalBtn = document.getElementById('callNormalBtn');
+const callPreferentialBtn = document.getElementById('callPreferentialBtn');
+const callAgainBtn = document.getElementById('callAgainBtn');
+const currentTicketDisplay = document.getElementById('currentTicketDisplay');
+const currentTicketTime = document.getElementById('currentTicketTime');
+const normalQueue = document.getElementById('normalQueue');
+const preferentialQueue = document.getElementById('preferentialQueue');
 
-    const emitNormalBtn = document.getElementById('emitNormalBtn');
-    const emitPreferentialBtn = document.getElementById('emitPreferentialBtn');
-    const lastNormalTicket = document.getElementById('lastNormalTicket');
-    const lastPreferentialTicket = document.getElementById('lastPreferentialTicket');
+const emitNormalBtn = document.getElementById('emitNormalBtn');
+const emitPreferentialBtn = document.getElementById('emitPreferentialBtn');
+const lastNormalTicket = document.getElementById('lastNormalTicket');
+const lastPreferentialTicket = document.getElementById('lastPreferentialTicket');
 
-    const clientVideo = document.getElementById('clientVideo');
-    const clientCurrentTicket = document.getElementById('clientCurrentTicket');
-    const clientCurrentTicketTime = document.getElementById('clientCurrentTicketTime');
-    const clientNextTickets = document.getElementById('clientNextTickets');
+const clientVideo = document.getElementById('clientVideo');
+const clientCurrentTicket = document.getElementById('clientCurrentTicket');
+const clientCurrentTicketTime = document.getElementById('clientCurrentTicketTime');
+const clientNextTickets = document.getElementById('clientNextTickets');
 
-    const currentTime = document.getElementById('currentTime');
+const currentTime = document.getElementById('currentTime');
 
-    const loginModal = document.getElementById('loginModal');
-    const loginPassword = document.getElementById('loginPassword');
-    const loginBtn = document.getElementById('loginBtn');
-    const cancelLoginBtn = document.getElementById('cancelLoginBtn');
+const loginModal = document.getElementById('loginModal');
+const loginPassword = document.getElementById('loginPassword');
+const loginBtn = document.getElementById('loginBtn');
+const cancelLoginBtn = document.getElementById('cancelLoginBtn');
 
-    let pendingTabId = null;
+const resetTicketsAtendenteBtn = document.getElementById('resetTicketsAtendenteBtn');
 
-    // ---------- Funções utilitárias ----------
-    function updateClock() {
-        const now = new Date();
-        const timeString = now.toLocaleTimeString('pt-BR');
-        const dateString = now.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-        currentTime.textContent = `${dateString} - ${timeString}`;
+let pendingTabId = null;
+let isMuted = false;
+
+/* ---------- Utilitários ---------- */
+function updateClock() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString('pt-BR');
+    const dateString = now.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    currentTime.textContent = `${dateString} - ${timeString}`;
+}
+
+function showTab(tabId) {
+    if (!isLoggedIn || (currentRole !== tabId && currentRole !== 'admin')) {
+        pendingTabId = tabId;
+        loginModal.classList.remove('hidden');
+        loginPassword.focus();
+        return;
     }
+    activateTab(tabId);
+}
 
-    function showTab(tabId) {
-        if (!isLoggedIn || (currentRole !== tabId && currentRole !== 'admin')) {
-            pendingTabId = tabId;
-            loginModal.classList.remove('hidden');
-            loginPassword.focus();
-            return;
-        }
+function activateTab(tabId) {
+    tabContents.forEach(c => c.classList.remove('active'));
+    tabButtons.forEach(b => b.classList.remove('active'));
+    const content = document.getElementById(tabId);
+    if (content) content.classList.add('active');
+    const btn = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
+    if (btn) btn.classList.add('active');
 
-        activateTab(tabId);
-    }
-
-    function activateTab(tabId) {
-        tabContents.forEach(c => c.classList.remove('active'));
-        tabButtons.forEach(b => b.classList.remove('active'));
-        const content = document.getElementById(tabId);
-        if (content) content.classList.add('active');
-        const btn = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
-        if (btn) btn.classList.add('active');
-
-        // Para cliente, esconder outras abas
-        if (tabId === 'cliente') {
-            tabButtons.forEach(b => {
-                if (b.getAttribute('data-tab') !== 'cliente') b.style.display = 'none';
-            });
-        } else {
-            tabButtons.forEach(b => b.style.display = 'block');
-        }
-
-        if (tabId === 'cliente') updateClientVideo();
-    }
-
-    function generateTicketNumber(type) {
-        if (type === 'normal') {
-            lastNormalNumber++;
-            return `N-${String(lastNormalNumber).padStart(3, '0')}`;
-        } else {
-            lastPreferentialNumber++;
-            return `P-${String(lastPreferentialNumber).padStart(3, '0')}`;
-        }
-    }
-
-    // ---------- Emissão ----------
-    function emitTicket(type) {
-        const ticketNumber = generateTicketNumber(type);
-        const now = new Date();
-        const ticket = { number: ticketNumber, type, timestamp: now, status: 'waiting', calledTime: null };
-
-        if (type === 'normal') {
-            normalTickets.push(ticket);
-            lastNormalTicket.textContent = `Última: ${ticketNumber}`;
-        } else {
-            preferentialTickets.push(ticket);
-            lastPreferentialTicket.textContent = `Última: ${ticketNumber}`;
-        }
-
-        updateQueues();
-        updateClientDisplay();
-        saveToLocalStorage();
-        printTicket(ticket);
-
-        const button = type === 'normal' ? emitNormalBtn : emitPreferentialBtn;
-        if (button) {
-            button.classList.add('animate-pulse');
-            setTimeout(() => button.classList.remove('animate-pulse'), 500);
-        }
-        return ticket;
-    }
-
-    // ---------- Chamar ----------
-    function callNextTicket(requestedType) {
-        // prioridade para preferenciais se existirem (comportamento comum)
-        let ticket = null;
-        if (preferentialTickets.length > 0) {
-            ticket = preferentialTickets.shift();
-        } else if (normalTickets.length > 0) {
-            ticket = normalTickets.shift();
-        }
-
-        if (!ticket) return null;
-
-        ticket.status = 'called';
-        ticket.calledTime = new Date();
-        currentTicket = ticket;
-        calledTickets.push(ticket);
-
-        updateCurrentTicketDisplay();
-        updateQueues();
-        updateClientDisplay();
-        saveToLocalStorage();
-        updateHistory();
-
-        const button = requestedType === 'preferential' ? callPreferentialBtn : callNormalBtn;
-        if (button) {
-            button.classList.add('animate-pulse');
-            setTimeout(() => button.classList.remove('animate-pulse'), 500);
-        }
-
-        // Som e fala
-        playAudio(800, 300);
-        setTimeout(() => {
-            speakTicket(ticket.number, ticket.type);
-        }, 100);
-
-        return ticket;
-    }
-
-    function callAgain() {
-        if (!currentTicket) return;
-        updateCurrentTicketDisplay();
-        updateClientDisplay();
-        callAgainBtn.classList.add('animate-pulse');
-        setTimeout(() => callAgainBtn.classList.remove('animate-pulse'), 500);
-    }
-
-    // ---------- Atualizações de UI ----------
-    function updateCurrentTicketDisplay() {
-        if (currentTicket) {
-            currentTicketDisplay.textContent = currentTicket.number;
-            currentTicketTime.textContent = currentTicket.calledTime ? currentTicket.calledTime.toLocaleTimeString('pt-BR') : '--:--:--';
-            currentTicketDisplay.classList.add('senha-chamada');
-        } else {
-            currentTicketDisplay.textContent = '---';
-            currentTicketTime.textContent = '--:--:--';
-            currentTicketDisplay.classList.remove('senha-chamada');
-        }
-    }
-
-    function updateQueues() {
-        normalQueue.innerHTML = '';
-        preferentialQueue.innerHTML = '';
-
-        normalTickets.slice(0, 5).forEach(t => {
-            const el = document.createElement('div');
-            el.className = 'bg-white p-2 rounded text-sm font-medium text-center';
-            el.textContent = t.number;
-            normalQueue.appendChild(el);
+    if (tabId === 'cliente') {
+        tabButtons.forEach(b => {
+            if (b.getAttribute('data-tab') !== 'cliente') b.style.display = 'none';
         });
-
-        preferentialTickets.slice(0, 5).forEach(t => {
-            const el = document.createElement('div');
-            el.className = 'bg-white p-2 rounded text-sm font-medium text-center';
-            el.textContent = t.number;
-            preferentialQueue.appendChild(el);
-        });
+    } else {
+        tabButtons.forEach(b => b.style.display = 'block');
     }
 
-    function updateClientDisplay() {
-        if (currentTicket) {
-            clientCurrentTicket.textContent = currentTicket.number;
-            clientCurrentTicketTime.textContent = currentTicket.calledTime ? currentTicket.calledTime.toLocaleTimeString('pt-BR') : '--:--:--';
-            clientCurrentTicket.classList.add('senha-chamada');
-        } else {
-            clientCurrentTicket.textContent = '---';
-            clientCurrentTicketTime.textContent = '--:--:--';
-            clientCurrentTicket.classList.remove('senha-chamada');
-        }
+    if (tabId === 'cliente') updateClientVideo();
+}
 
-        clientNextTickets.innerHTML = '';
-        const nextTickets = [...preferentialTickets.slice(0, 2), ...normalTickets.slice(0, 2)];
-        nextTickets.forEach(t => {
-            const el = document.createElement('div');
-            el.className = 'bg-gray-700 p-2 rounded text-center text-sm';
-            el.textContent = t.number;
-            clientNextTickets.appendChild(el);
-        });
+/* Geração de número */
+function generateTicketNumber(type) {
+    if (type === 'normal') {
+        lastNormalNumber++;
+        return `N-${String(lastNormalNumber).padStart(3, '0')}`;
+    } else {
+        lastPreferentialNumber++;
+        return `P-${String(lastPreferentialNumber).padStart(3, '0')}`;
+    }
+}
+
+/* ---------- Emissão ---------- */
+function emitTicket(type) {
+    const ticketNumber = generateTicketNumber(type);
+    const now = new Date();
+    const ticket = { number: ticketNumber, type, timestamp: now, status: 'waiting', calledTime: null };
+
+    if (type === 'normal') {
+        normalTickets.push(ticket);
+        lastNormalTicket.textContent = `Última: ${ticketNumber}`;
+    } else {
+        preferentialTickets.push(ticket);
+        lastPreferentialTicket.textContent = `Última: ${ticketNumber}`;
     }
 
-    function updateHistory() {
-        historyList.innerHTML = '';
-        const last = calledTickets.slice(-10).reverse();
-        last.forEach(ticket => {
-            const row = document.createElement('tr');
-            row.className = 'historico-item';
-            const typeText = ticket.type === 'normal' ? 'Normal' : 'Preferencial';
-            const calledTimeStr = ticket.calledTime ? new Date(ticket.calledTime).toLocaleString('pt-BR') : '';
-            row.innerHTML = `
-                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${typeText}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${ticket.number}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${calledTimeStr}</td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Chamado</span>
-                </td>
-            `;
-            historyList.appendChild(row);
-        });
+    updateQueues();
+    updateClientDisplay();
+    saveToLocalStorage();
+    printTicket(ticket);
+
+    const button = type === 'normal' ? emitNormalBtn : emitPreferentialBtn;
+    if (button) {
+        button.classList.add('animate-pulse');
+        setTimeout(() => button.classList.remove('animate-pulse'), 500);
+    }
+    return ticket;
+}
+
+/* ---------- Chamar ---------- */
+function callNextTicket(requestedType) {
+    // preferenciais têm prioridade quando existirem
+    let ticket = null;
+    if (preferentialTickets.length > 0) {
+        ticket = preferentialTickets.shift();
+    } else if (normalTickets.length > 0) {
+        ticket = normalTickets.shift();
     }
 
-    // ---------- Audio e Fala ----------
-    function playAudio(frequency = 800, duration = 500) {
-        try {
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            const oscillator = audioContext.createOscillator();
-            const gainNode = audioContext.createGain();
-            oscillator.connect(gainNode);
-            gainNode.connect(audioContext.destination);
-            oscillator.frequency.value = frequency;
-            oscillator.type = 'sine';
-            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration / 1000);
-            oscillator.start(audioContext.currentTime);
-            oscillator.stop(audioContext.currentTime + duration / 1000);
-        } catch (e) {
-            console.warn('Audio não disponível:', e);
-        }
+    if (!ticket) return null;
+
+    ticket.status = 'called';
+    ticket.calledTime = new Date();
+    currentTicket = ticket;
+    calledTickets.push(ticket);
+
+    updateCurrentTicketDisplay();
+    updateQueues();
+    updateClientDisplay();
+    saveToLocalStorage();
+    updateHistory();
+
+    const button = requestedType === 'preferential' ? callPreferentialBtn : callNormalBtn;
+    if (button) {
+        button.classList.add('animate-pulse');
+        setTimeout(() => button.classList.remove('animate-pulse'), 500);
     }
 
-    function speakTicket(ticketNumber, ticketType) {
-        const typeText = ticketType === 'normal' ? 'normal' : 'preferencial';
-        const text = `Senha ${ticketNumber}, ${typeText}`;
-        if ('speechSynthesis' in window) {
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'pt-BR';
-            utterance.rate = 1;
-            speechSynthesis.cancel();
-            speechSynthesis.speak(utterance);
-        }
-    }
+    // Som e fala
+    playAudio(800, 300);
+    setTimeout(() => {
+        speakTicket(ticket.number, ticket.type);
+    }, 100);
 
-    // ---------- Vídeo do cliente ----------
-    function extractSrcFromIframe(html) {
-        const m = String(html).match(/src=["']([^"']+)["']/i);
-        return m ? m[1] : null;
-    }
-    function updateClientVideo() {
-        let url = videoUrl || '';
-        if (url.includes('<iframe')) {
-            const extracted = extractSrcFromIframe(url);
-            if (extracted) url = extracted;
-        }
-        // Se for um link do youtube tipo "https://www.youtube.com/watch?v=..." transforma pra embed
-        if (url.includes('youtube.com/watch') && url.includes('v=')) {
-            const params = new URLSearchParams(url.split('?')[1]);
-            const v = params.get('v');
-            if (v) url = `https://www.youtube.com/embed/${v}?autoplay=1&mute=1`;
-        } else if (url.includes('youtube.com/embed')) {
-            if (!url.includes('autoplay=1')) {
-                url += (url.includes('?') ? '&' : '?') + 'autoplay=1&mute=1';
-            }
-        }
-        clientVideo.src = url;
-        videoPreview.src = url;
-        // Aplicar volume atual
-        const v = Number(videoVolume.value || 50) / 100;
-        try { clientVideo.volume = v; } catch (e) {}
-    }
+    return ticket;
+}
 
-    // ---------- Impressão ----------
-    function printTicket(ticket) {
-        const printWindow = window.open('', '_blank', 'width=400,height=400');
-        if (!printWindow || printWindow === window) {
-            console.warn('Print popup blocked or reused same window, skipping print');
-            return;
-        }
-        const color = ticket.type === 'normal' ? '#4f46e5' : '#10b981';
-        const typeText = ticket.type === 'normal' ? 'NORMAL' : 'PREFERENCIAL';
-        const htmlParts = [];
-        htmlParts.push('<html><head><title>Senha - ' + ticket.number + '</title>');
-        htmlParts.push('<style>body{font-family:Arial,sans-serif;text-align:center;padding:20px;} .ticket{border:2px solid ' + color + ';padding:30px;margin:20px;} .number{font-size:72px;font-weight:bold;color:' + color + ';}.type{font-size:28px;margin:15px 0;}.date{font-size:14px;color:#666;margin-top:20px;}</style>');
-        htmlParts.push('</head><body>');
-        htmlParts.push('<div class="ticket"><h1>Mobile Vision Senhas</h1>');
-        htmlParts.push('<div class="number">' + ticket.number + '</div>');
-        htmlParts.push('<div class="type">' + typeText + '</div>');
-        htmlParts.push('<div class="date">Emitido em: ' + (ticket.timestamp ? new Date(ticket.timestamp).toLocaleString('pt-BR') : '') + '</div>');
-        htmlParts.push('</div>');
-        htmlParts.push('<script>window.onload=function(){window.print();setTimeout(()=>window.close(),500);};</scr' + 'ipt>');
-        htmlParts.push('</body></html>');
-        printWindow.document.write(htmlParts.join(''));
-        printWindow.document.close();
+function callAgain() {
+    if (!currentTicket) return;
+    // reaplica animações e atualiza displays
+    updateCurrentTicketDisplay();
+    updateClientDisplay();
+    callAgainBtn.classList.add('animate-pulse');
+    setTimeout(() => callAgainBtn.classList.remove('animate-pulse'), 500);
+
+    // fala novamente
+    playAudio(800, 300);
+    setTimeout(() => {
+        speakTicket(currentTicket.number, currentTicket.type);
+    }, 100);
+}
+
+/* ---------- UI ---------- */
+function updateCurrentTicketDisplay() {
+    if (currentTicket) {
+        currentTicketDisplay.textContent = currentTicket.number;
+        currentTicketTime.textContent = currentTicket.calledTime ? currentTicket.calledTime.toLocaleTimeString('pt-BR') : '--:--:--';
+        currentTicketDisplay.classList.add('senha-chamada');
+    } else {
+        currentTicketDisplay.textContent = '---';
+        currentTicketTime.textContent = '--:--:--';
+        currentTicketDisplay.classList.remove('senha-chamada');
     }
+}
 
-    // ---------- Persistência ----------
-    function saveToLocalStorage() {
-        try {
-            localStorage.setItem('normalTickets', JSON.stringify(normalTickets));
-            localStorage.setItem('preferentialTickets', JSON.stringify(preferentialTickets));
-            localStorage.setItem('calledTickets', JSON.stringify(calledTickets));
-            localStorage.setItem('lastNormalNumber', String(lastNormalNumber));
-            localStorage.setItem('lastPreferentialNumber', String(lastPreferentialNumber));
-            localStorage.setItem('videoUrl', videoUrl || '');
-        } catch (e) {
-            console.warn('Erro ao salvar localStorage:', e);
-        }
-    }
+function updateQueues() {
+    normalQueue.innerHTML = '';
+    preferentialQueue.innerHTML = '';
 
-    function loadFromLocalStorage() {
-        try {
-            const savedNormal = localStorage.getItem('normalTickets');
-            const savedPreferential = localStorage.getItem('preferentialTickets');
-            const savedCalled = localStorage.getItem('calledTickets');
-            const savedLastNormal = localStorage.getItem('lastNormalNumber');
-            const savedLastPreferential = localStorage.getItem('lastPreferentialNumber');
-            const savedVideoUrl = localStorage.getItem('videoUrl');
-
-            if (savedNormal) {
-                normalTickets = JSON.parse(savedNormal).map(t => ({ ...t, timestamp: t.timestamp ? new Date(t.timestamp) : null, calledTime: t.calledTime ? new Date(t.calledTime) : null }));
-            }
-            if (savedPreferential) {
-                preferentialTickets = JSON.parse(savedPreferential).map(t => ({ ...t, timestamp: t.timestamp ? new Date(t.timestamp) : null, calledTime: t.calledTime ? new Date(t.calledTime) : null }));
-            }
-            if (savedCalled) {
-                calledTickets = JSON.parse(savedCalled).map(t => ({ ...t, timestamp: t.timestamp ? new Date(t.timestamp) : null, calledTime: t.calledTime ? new Date(t.calledTime) : null }));
-            }
-            if (savedLastNormal) lastNormalNumber = parseInt(savedLastNormal) || 0;
-            if (savedLastPreferential) lastPreferentialNumber = parseInt(savedLastPreferential) || 0;
-            if (savedVideoUrl) videoUrl = savedVideoUrl || videoUrl;
-        } catch (e) {
-            console.warn('Erro ao carregar localStorage:', e);
-        }
-    }
-
-    // ---------- Eventos ----------
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const tabId = button.getAttribute('data-tab');
-            showTab(tabId);
-        });
+    normalTickets.slice(0, 5).forEach(t => {
+        const el = document.createElement('div');
+        el.className = 'bg-white p-2 rounded text-sm font-medium text-center';
+        el.textContent = t.number;
+        normalQueue.appendChild(el);
     });
 
-    if (loginBtn) loginBtn.addEventListener('click', () => {
-        const password = loginPassword.value;
-        if (password === passwords[pendingTabId]) {
-            isLoggedIn = true;
-            currentRole = pendingTabId;
-            loginModal.classList.add('hidden');
-            loginPassword.value = '';
-            activateTab(pendingTabId);
-        } else {
-            alert('Senha incorreta!');
-        }
+    preferentialTickets.slice(0, 5).forEach(t => {
+        const el = document.createElement('div');
+        el.className = 'bg-white p-2 rounded text-sm font-medium text-center';
+        el.textContent = t.number;
+        preferentialQueue.appendChild(el);
     });
+}
 
-    if (cancelLoginBtn) cancelLoginBtn.addEventListener('click', () => {
+function updateClientDisplay() {
+    if (currentTicket) {
+        clientCurrentTicket.textContent = currentTicket.number;
+        clientCurrentTicketTime.textContent = currentTicket.calledTime ? currentTicket.calledTime.toLocaleTimeString('pt-BR') : '--:--:--';
+        clientCurrentTicket.classList.add('senha-chamada');
+    } else {
+        clientCurrentTicket.textContent = '---';
+        clientCurrentTicketTime.textContent = '--:--:--';
+        clientCurrentTicket.classList.remove('senha-chamada');
+    }
+
+    clientNextTickets.innerHTML = '';
+    const nextTickets = [...preferentialTickets.slice(0, 2), ...normalTickets.slice(0, 2)];
+    nextTickets.forEach(t => {
+        const el = document.createElement('div');
+        el.className = 'bg-gray-700 p-2 rounded text-center text-sm';
+        el.textContent = t.number;
+        clientNextTickets.appendChild(el);
+    });
+}
+
+function updateHistory() {
+    historyList.innerHTML = '';
+    const last = calledTickets.slice(-10).reverse();
+    last.forEach(ticket => {
+        const row = document.createElement('tr');
+        row.className = 'historico-item';
+        const typeText = ticket.type === 'normal' ? 'Normal' : 'Preferencial';
+        const calledTimeStr = ticket.calledTime ? new Date(ticket.calledTime).toLocaleString('pt-BR') : '';
+        row.innerHTML = `
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${typeText}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${ticket.number}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${calledTimeStr}</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Chamado</span>
+            </td>
+        `;
+        historyList.appendChild(row);
+    });
+}
+
+/* ---------- Áudio e Fala ---------- */
+function playAudio(frequency = 800, duration = 500) {
+    try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        oscillator.frequency.value = frequency;
+        oscillator.type = 'sine';
+        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration / 1000);
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + duration / 1000);
+    } catch (e) {
+        console.warn('Audio não disponível:', e);
+    }
+}
+
+function speakTicket(ticketNumber, ticketType) {
+    const typeText = ticketType === 'normal' ? 'normal' : 'preferencial';
+    const text = `Senha ${ticketNumber}, ${typeText}`;
+    if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 1;
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utterance);
+    }
+}
+
+/* ---------- Vídeo Cliente ---------- */
+function extractSrcFromIframe(html) {
+    const m = String(html).match(/src=["']([^"']+)["']/i);
+    return m ? m[1] : null;
+}
+function buildEmbedUrl(rawUrl, autoplay = true, mute = false) {
+    let url = rawUrl || '';
+    if (!url) return '';
+    // Se recebeu iframe HTML, extrai src
+    if (url.includes('<iframe')) {
+        const extracted = extractSrcFromIframe(url);
+        if (extracted) url = extracted;
+    }
+    // converter watch?v= para embed
+    if (url.includes('youtube.com/watch') && url.includes('v=')) {
+        const params = new URLSearchParams(url.split('?')[1]);
+        const v = params.get('v');
+        if (v) url = `https://www.youtube.com/embed/${v}`;
+    }
+    // garantir embed base
+    if (url.includes('youtube.com/embed')) {
+        // limpar autoplay/mute params
+        url = url.split('?')[0];
+        const params = [];
+        if (autoplay) params.push('autoplay=1');
+        if (mute) params.push('mute=1');
+        // permitir controls para permitir ligar som manualmente
+        params.push('controls=1');
+        return url + (params.length ? ('?' + params.join('&')) : '');
+    }
+    return url;
+}
+
+function updateClientVideo(autoplayTry = true) {
+    let url = videoUrl || '';
+    const muteParam = isMuted ? true : false;
+    const embed = buildEmbedUrl(url, autoplayTry, muteParam);
+    clientVideo.src = embed;
+    videoPreview.src = embed;
+    // tentar ajustar volume via propriedade (pode não funcionar por cross-origin)
+    const v = Number(videoVolume.value || 50) / 100;
+    try { clientVideo.volume = v; } catch (e) {}
+}
+
+/* ---------- Impressão ---------- */
+function printTicket(ticket) {
+    const printWindow = window.open('', '_blank', 'width=400,height=400');
+    if (!printWindow || printWindow === window) {
+        console.warn('Print popup blocked or reused same window, skipping print');
+        return;
+    }
+    const color = ticket.type === 'normal' ? '#4f46e5' : '#10b981';
+    const typeText = ticket.type === 'normal' ? 'NORMAL' : 'PREFERENCIAL';
+    const htmlParts = [];
+    htmlParts.push('<html><head><title>Senha - ' + ticket.number + '</title>');
+    htmlParts.push('<style>body{font-family:Arial,sans-serif;text-align:center;padding:20px;} .ticket{border:2px solid ' + color + ';padding:30px;margin:20px;} .number{font-size:72px;font-weight:bold;color:' + color + ';}.type{font-size:28px;margin:15px 0;}.date{font-size:14px;color:#666;margin-top:20px;}</style>');
+    htmlParts.push('</head><body>');
+    htmlParts.push('<div class="ticket"><h1>Mobile Vision Senhas</h1>');
+    htmlParts.push('<div class="number">' + ticket.number + '</div>');
+    htmlParts.push('<div class="type">' + typeText + '</div>');
+    htmlParts.push('<div class="date">Emitido em: ' + (ticket.timestamp ? new Date(ticket.timestamp).toLocaleString('pt-BR') : '') + '</div>');
+    htmlParts.push('</div>');
+    htmlParts.push('<script>window.onload=function(){window.print();setTimeout(()=>window.close(),500);};</scr' + 'ipt>');
+    htmlParts.push('</body></html>');
+    printWindow.document.write(htmlParts.join(''));
+    printWindow.document.close();
+}
+
+/* ---------- Persistência ---------- */
+function saveToLocalStorage() {
+    try {
+        localStorage.setItem('normalTickets', JSON.stringify(normalTickets));
+        localStorage.setItem('preferentialTickets', JSON.stringify(preferentialTickets));
+        localStorage.setItem('calledTickets', JSON.stringify(calledTickets));
+        localStorage.setItem('lastNormalNumber', String(lastNormalNumber));
+        localStorage.setItem('lastPreferentialNumber', String(lastPreferentialNumber));
+        localStorage.setItem('videoUrl', videoUrl || '');
+        localStorage.setItem('isMuted', String(isMuted));
+        localStorage.setItem('videoVolume', String(videoVolume.value || 50));
+    } catch (e) {
+        console.warn('Erro ao salvar localStorage:', e);
+    }
+}
+
+function loadFromLocalStorage() {
+    try {
+        const savedNormal = localStorage.getItem('normalTickets');
+        const savedPreferential = localStorage.getItem('preferentialTickets');
+        const savedCalled = localStorage.getItem('calledTickets');
+        const savedLastNormal = localStorage.getItem('lastNormalNumber');
+        const savedLastPreferential = localStorage.getItem('lastPreferentialNumber');
+        const savedVideoUrl = localStorage.getItem('videoUrl');
+        const savedIsMuted = localStorage.getItem('isMuted');
+        const savedVideoVol = localStorage.getItem('videoVolume');
+
+        if (savedNormal) {
+            normalTickets = JSON.parse(savedNormal).map(t => ({ ...t, timestamp: t.timestamp ? new Date(t.timestamp) : null, calledTime: t.calledTime ? new Date(t.calledTime) : null }));
+        }
+        if (savedPreferential) {
+            preferentialTickets = JSON.parse(savedPreferential).map(t => ({ ...t, timestamp: t.timestamp ? new Date(t.timestamp) : null, calledTime: t.calledTime ? new Date(t.calledTime) : null }));
+        }
+        if (savedCalled) {
+            calledTickets = JSON.parse(savedCalled).map(t => ({ ...t, timestamp: t.timestamp ? new Date(t.timestamp) : null, calledTime: t.calledTime ? new Date(t.calledTime) : null }));
+        }
+        if (savedLastNormal) lastNormalNumber = parseInt(savedLastNormal) || 0;
+        if (savedLastPreferential) lastPreferentialNumber = parseInt(savedLastPreferential) || 0;
+        if (savedVideoUrl) videoUrl = savedVideoUrl || videoUrl;
+        if (savedIsMuted) isMuted = (savedIsMuted === 'true');
+        if (savedVideoVol) videoVolume.value = savedVideoVol;
+    } catch (e) {
+        console.warn('Erro ao carregar localStorage:', e);
+    }
+}
+
+/* ---------- Eventos ---------- */
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const tabId = button.getAttribute('data-tab');
+        showTab(tabId);
+    });
+});
+
+if (loginBtn) loginBtn.addEventListener('click', () => {
+    const password = loginPassword.value;
+    if (password === passwords[pendingTabId]) {
+        isLoggedIn = true;
+        currentRole = pendingTabId;
         loginModal.classList.add('hidden');
         loginPassword.value = '';
-    });
-
-    if (saveVideoConfig) saveVideoConfig.addEventListener('click', () => {
-        videoUrl = videoUrlInput.value || videoUrl;
-        updateClientVideo();
-        saveToLocalStorage();
-        alert('Configuração salva!');
-        // Atualizar vídeo do cliente em tempo real
-        updateClientVideo();
-    });
-
-    if (videoVolume) videoVolume.addEventListener('input', () => {
-        const v = Number(videoVolume.value || 50) / 100;
-        try { videoPreview.volume = v; } catch (e) {}
-        // Atualizar volume do cliente
-        try { clientVideo.volume = v; } catch (e) {}
-    });
-
-    if (callNormalBtn) callNormalBtn.addEventListener('click', () => callNextTicket('normal'));
-    if (callPreferentialBtn) callPreferentialBtn.addEventListener('click', () => callNextTicket('preferential'));
-    if (callAgainBtn) callAgainBtn.addEventListener('click', callAgain);
-
-    if (emitNormalBtn) emitNormalBtn.addEventListener('click', () => emitTicket('normal'));
-    if (emitPreferentialBtn) emitPreferentialBtn.addEventListener('click', () => emitTicket('preferential'));
-
-    // ---------- Inicialização ----------
-    function init() {
-        loadFromLocalStorage();
-        updateClock();
-        setInterval(updateClock, 1000);
-
-        // inicializa campos e UI
-        videoUrlInput.value = videoUrl;
-        updateClientVideo();
-        updateQueues();
-        updateCurrentTicketDisplay();
-        updateClientDisplay();
-        updateHistory();
-
-        // ativa a primeira aba por padrão (admin) - mas agora com login
-        // showTab('admin'); // Removido para forçar login
-
-        // configura iframe do cliente
-        try {
-            clientVideo.setAttribute('allow', 'autoplay; encrypted-media');
-            clientVideo.setAttribute('autoplay', '');
-            clientVideo.setAttribute('muted', '');
-            clientVideo.setAttribute('controls', '');
-            clientVideo.addEventListener('error', () => console.error('Erro ao carregar vídeo:', clientVideo.src));
-        } catch (e) { /* ignore */ }
-
-
-
-        console.log('Sistema iniciado com sucesso!');
+        activateTab(pendingTabId);
+    } else {
+        alert('Senha incorreta!');
     }
+});
 
-    window.addEventListener('load', init);
-    </script>
+if (cancelLoginBtn) cancelLoginBtn.addEventListener('click', () => {
+    loginModal.classList.add('hidden');
+    loginPassword.value = '';
+});
+
+if (saveVideoConfig) saveVideoConfig.addEventListener('click', () => {
+    videoUrl = videoUrlInput.value || videoUrl;
+    // ao salvar, forçar autoplay tentativa e aplicar mute conforme estado
+    updateClientVideo(true);
+    saveToLocalStorage();
+    alert('Configuração salva! Tentando abrir vídeo no cliente.');
+});
+
+if (toggleMuteBtn) toggleMuteBtn.addEventListener('click', () => {
+    isMuted = !isMuted;
+    toggleMuteBtn.innerHTML = `<i class="fas fa-volume-${isMuted ? 'mute' : 'up'} mr-2"></i> ${isMuted ? 'Mudo' : 'Com Som'}`;
+    updateClientVideo(true);
+    saveToLocalStorage();
+});
+
+if (videoVolume) {
+    videoVolume.addEventListener('input', () => {
+        const v = Number(videoVolume.value || 50);
+        videoVolumeLabel.textContent = `${v}%`;
+        // tentar aplicar volume (pode não funcionar em iframe de terceiros)
+        try { clientVideo.volume = v / 100; videoPreview.volume = v / 100; } catch (e) {}
+        saveToLocalStorage();
+    });
+}
+
+if (callNormalBtn) callNormalBtn.addEventListener('click', () => callNextTicket('normal'));
+if (callPreferentialBtn) callPreferentialBtn.addEventListener('click', () => callNextTicket('preferential'));
+if (callAgainBtn) callAgainBtn.addEventListener('click', callAgain);
+
+if (emitNormalBtn) emitNormalBtn.addEventListener('click', () => emitTicket('normal'));
+if (emitPreferentialBtn) emitPreferentialBtn.addEventListener('click', () => emitTicket('preferential'));
+
+if (resetAllBtn) resetAllBtn.addEventListener('click', () => {
+    if (!confirm('Confirma zerar todas as senhas e histórico (Ação irreversível)?')) return;
+    resetAllTickets();
+});
+
+if (resetTicketsAtendenteBtn) resetTicketsAtendenteBtn.addEventListener('click', () => {
+    if (!confirm('Confirma zerar senhas (Atendente)?')) return;
+    resetAllTickets();
+});
+
+/* ---------- Resetar Senhas ---------- */
+function resetAllTickets() {
+    normalTickets = [];
+    preferentialTickets = [];
+    calledTickets = [];
+    currentTicket = null;
+    lastNormalNumber = 0;
+    lastPreferentialNumber = 0;
+    // limpar displays
+    updateQueues();
+    updateCurrentTicketDisplay();
+    updateClientDisplay();
+    updateHistory();
+    saveToLocalStorage();
+    alert('Senhas e histórico zerados com sucesso.');
+}
+
+/* ---------- Inicialização ---------- */
+function init() {
+    loadFromLocalStorage();
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    videoUrlInput.value = videoUrl;
+    videoVolumeLabel.textContent = `${videoVolume.value}%`;
+    toggleMuteBtn.innerHTML = `<i class="fas fa-volume-${isMuted ? 'mute' : 'up'} mr-2"></i> ${isMuted ? 'Mudo' : 'Com Som'}`;
+
+    updateClientVideo(false);
+    updateQueues();
+    updateCurrentTicketDisplay();
+    updateClientDisplay();
+    updateHistory();
+
+    try {
+        clientVideo.setAttribute('allow', 'autoplay; encrypted-media');
+        clientVideo.setAttribute('controls', '');
+        clientVideo.addEventListener('error', () => console.error('Erro ao carregar vídeo:', clientVideo.src));
+    } catch (e) { /* ignore */ }
+
+    console.log('Sistema iniciado com sucesso!');
+}
+
+window.addEventListener('load', init);
+</script>
 </body>
 </html>
